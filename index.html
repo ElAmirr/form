@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+</head>
+<body>
+<div class="center">
+    <form name="formname">
+    First name:<br>
+      <input type="text" name="firstname" value="">
+      <br>
+      Last name:<br>
+      <input type="text" name="lastname" value="">
+      <br>
+      Adress:<br>
+      <input type="email" name="adress" value="">
+      <br>
+      Password:<br>
+      <input type="password" name="password" value="" id="pass">
+      <br>
+      Comments:<br>
+      <textarea name="comments" style="width:167px; height:60px;"></textarea>
+      <br>
+      <button  value="Send"  type="text"  style="width:174px;" onclick="validateForm(); passwordFunction(); caracterFunction()";>Submit </button>
+      <br>
+      <input type="reset" value="Reset" style="width:174px;">
+    </form>
+    <p id="demo"></p>
+</div>
+</body>
+<script>
+
+
+function validateForm() {
+  var x = document.forms["formname"]["firstname"].value;
+  var y = document.forms["formname"]["lastname"].value;
+  var z = document.forms["formname"]["adress"].value;
+  var w = document.forms["formname"]["password"].value;
+  if ((x && y && z && w) == "") {
+      alert("please enter a value");
+      return false;
+  }
+  else  return true;
+}
+function passwordFunction(){
+  var n = document.getElementById("pass").value;
+
+  if (n.length < 8) {
+    alert("The password has less than 8 characters");
+  }
+}
+function caracterFunction(){ 
+ 
+  
+  var n = document.getElementById("pass").value;
+
+  let up=/([aA-Z])/g
+if (n.match(up))
+{return true}
+else alert("The password must have at least an uppercase letter");
+  let nb=/([0-9])/g
+if(n.match(nb))
+{return true}
+else alert("the password must have at least a number");
+}
+
+</script>
+</html>

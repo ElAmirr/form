@@ -1,0 +1,16 @@
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px 10px 10px 500px;
+  }
+body{
+    background-color: rgb(85, 50, 66);
+}
+form{
+    color: white;
+}
+input, textarea{
+    background-color:rgb(41, 41, 58);
+    border-width: 0px;
+    color: white;
+}
